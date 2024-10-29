@@ -1,0 +1,13 @@
+<!-- app/views/finance/index.html.erb -->
+
+<h2 class="text-3xl font-bold text-center mb-6">Finance Details</h2>
+<section class="container mx-auto p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <% @crops.each do |crop| %>
+    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-200">
+      <h3 class="text-xl font-bold mb-2"><%= crop[:name] %></h3>
+      <p class="text-gray-600 mb-4">Market Rate: <%= crop[:market_rate] %> per kg</p>
+      <p class="text-gray-600 mb-4">Buying Price: <%= crop[:buying_price] %> per kg</p>
+      <p class="text-gray-600 mb-4">Selling Price: <%= crop[:selling_price] %> per kg</p>
+    </div>
+  <% end %>
+</section>
